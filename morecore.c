@@ -186,7 +186,7 @@ static void *hugetlbfs_morecore(ptrdiff_t increment)
 			* wasteful to do it for allocation so we only shrink
 			* the top by the size of a page.
 			*/
-			increment = heapbase - heaptop + mapsize + delta;
+			increment = heapbase - heaptop + mapsize;
 
 			if (!__hugetlb_opts.map_hugetlb && !using_default_pagesize){
 
